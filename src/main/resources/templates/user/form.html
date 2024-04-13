@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>User Form</title>
+</head>
+<body>
+<h2>User Form</h2>
+<form method="post" th:object="${user}" th:action="@{/save}">
+  <input type="hidden" th:field="*{id}"/>
+  <label>First Name: <input type="text" th:field="*{fname}"/></label><br/>
+  <label>Last Name: <input type="text" th:field="*{lastname}"/></label><br/>
+  <label>Phone: <input type="text" th:field="*{phone}"/></label><br/>
+  <label>Enabled: <input type="checkbox" th:field="*{enabled}"/></label><br/>
+  <input type="submit" value="Submit"/>
+</form>
+</body>
+</html>
